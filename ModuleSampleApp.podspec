@@ -17,6 +17,8 @@ This CocoaPods library helps you to understand about module more testing testing
 
   spec.source       = { :git => "https://github.com/salsabilaazaria/ModuleSampeApp.git", :tag => "#{spec.version}" }
   spec.source_files  = "ModuleSampleApp/**/*.{h,m,swift}"
-  spec.resources = "ModuleSampleApp/ModuleSampleApp.bundle"
+spec.resource_bundles = {
+   'ModuleSampleApp' => ['ModuleSampleApp/*.bundle'],
+}
 
 end
