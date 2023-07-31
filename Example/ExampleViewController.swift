@@ -21,33 +21,13 @@ class ExampleViewController: UIViewController {
     
     @objc private func buttonTapped() {
         let viewController: UIViewController
-        
-//        let bundle = Bundle.main
-//        if let path = bundle.path(forResource: "ModuleSampleAppBundle", ofType: "bundle"),
-//           let resourceBundle = Bundle(path: path) {
-//            resourceBundle.load()
-//            if let vc = resourceBundle.loadNibNamed("TestingBundleViewController", owner: self) as? TestingBundleViewController {
-//                viewController = vc
-//            }  else {
-//                viewController = ModuleViewController()
-//            }
-//
-//
-//        } else {
-//            viewController = ModuleViewController()
-//        }
-//
-//
-        
-        
-        
-//
+
         if let testingVC = ModuleBuilder.createTestingVC() {
             viewController = testingVC
         } else {
             viewController = ModuleViewController()
         }
-        
+
         self.navigationController?.pushViewController(viewController, animated: true)
         
     }
